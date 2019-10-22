@@ -37,7 +37,7 @@ public class SoftwareDesignAssignment3 {
         
         
         
-        ParkingLot test = new ParkingLot(3);
+        ParkingLot test = new ParkingLot(10);
         Scanner xp = new Scanner(System.in);
         System.out.println("Capacity of parking lot = "+ test.getCapacity());
         
