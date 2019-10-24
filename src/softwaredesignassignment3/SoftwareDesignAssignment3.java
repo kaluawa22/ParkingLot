@@ -58,8 +58,10 @@ public class SoftwareDesignAssignment3 {
         System.out.println("Lets try to park another car!");
         System.out.println("The next car to park is :" + linesArray[2]);
         test.parkACar(linesArray[2]);
+        System.out.println("Lets try to park another car!");
         System.out.println("The next car to park is :" + linesArray[3]);
         test.parkACar(linesArray[3]);
+        System.out.println("Lets try to park another car!");
         System.out.println("The next car to park is :" + linesArray[4]);
         test.parkACar(linesArray[4]);
         
