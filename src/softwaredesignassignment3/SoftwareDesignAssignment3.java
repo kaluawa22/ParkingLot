@@ -46,24 +46,81 @@ public class SoftwareDesignAssignment3 {
         }
         String[] linesArray = lines.toArray(new String[lines.size()]);
         
-        int parkingLotCapacity = Integer.valueOf(linesArray[0]);
+        int parkingLot1Capacity = Integer.valueOf(linesArray[0]);
+        int parkingLot2Capacity = Integer.valueOf(linesArray[1]);
+        int parkingLot3Capacity = Integer.valueOf(linesArray[2]);
         
-        System.out.println("This is the parkingLot Capacity :" + parkingLotCapacity);
+        System.out.println("There are 3 Avaiable parking lots to choose from!");
+        System.out.println("Parking Lot 1 has has " + parkingLot1Capacity + "spaces" );
+        System.out.println("Parking Lot 2 has has " + parkingLot2Capacity + "spaces" );
+        System.out.println("Parking Lot 3 has has " + parkingLot3Capacity + "spaces" );
         
-        ParkingLot test = new ParkingLot(parkingLotCapacity);
-        System.out.println("The Capacity of the parking lot is = " + test.getCapacity());
+//        System.out.println("This is the parkingLot Capacity :" + parkingLotCapacity);
+        
+        ParkingLot Lot1 = new ParkingLot(parkingLot1Capacity);
+        ParkingLot Lot2 = new ParkingLot(parkingLot2Capacity);
+        ParkingLot Lot3 = new ParkingLot(parkingLot3Capacity);
+        
+        
+//        System.out.println("The Capacity of the parking lot is = " + Lot1.getCapacity());
         System.out.println("Lets try to park some cars!");
-        System.out.println("The first car to park is :" + linesArray[1]);
-        test.parkACar(linesArray[1]);
+        System.out.println("The first car to park is :" + linesArray[3] + "in Lot 1");
+        Lot1.parkACar(linesArray[3]);
+        System.out.println("The current amount of spots taken in Parking Lot 1 is "+ Lot1.getCapacity());
+        
+        System.out.println("The next car to park is :" + linesArray[4] + "in Lot 2");
+        Lot2.parkACar(linesArray[4]);
+        System.out.println("The current amount of spots taken in Parking Lot 2 is "+ Lot2.getCapacity());
+        
+        
+        System.out.println("The next car to park is :" + linesArray[5] + "in Lot 3");
+        Lot3.parkACar(linesArray[5]);
+        System.out.println("The current amount of spots taken in Parking Lot 3 is "+ Lot3.getCapacity());
+        
+        
+        System.out.println("The next car to park is :" + linesArray[3] + "in Lot 1");
+        Lot1.parkACar(linesArray[3]);
+        System.out.println("The current amount of spots taken in Parking Lot 1 is "+ Lot1.getCapacity());
+        
+        System.out.println("The next car to park is :" + linesArray[4] + "in Lot 2");
+        Lot2.parkACar(linesArray[4]);
+        System.out.println("The current amount of spots taken in Parking Lot 2 is "+ Lot2.getCapacity());
+        
+        
+        System.out.println("The next car to park is :" + linesArray[5] + "in Lot 3");
+        Lot3.parkACar(linesArray[5]);
+        System.out.println("The current amount of spots taken in Parking Lot 3 is "+ Lot3.getCapacity());
+        
+        
+        System.out.println("The next car to park is :" + linesArray[3] + "in Lot 1");
+        Lot1.parkACar(linesArray[3]);
+        System.out.println("The current amount of spots taken in Parking Lot 1 is "+ Lot1.getCapacity());
+        
+        System.out.println("The next car to park is :" + linesArray[4] + "in Lot 2");
+        Lot2.parkACar(linesArray[4]);
+        System.out.println("The current amount of spots taken in Parking Lot 2 is "+ Lot2.getCapacity());
+        
+        
+        System.out.println("The next car to park is :" + linesArray[5] + "in Lot 3");
+        Lot3.parkACar(linesArray[5]);
+        System.out.println("The current amount of spots taken in Parking Lot 3 is "+ Lot3.getCapacity());
+
+        
+        
+        
+        
+        
+        
+        Lot1.parkACar(linesArray[1]);
         System.out.println("Lets try to park another car!");
         System.out.println("The next car to park is :" + linesArray[2]);
-        test.parkACar(linesArray[2]);
+        Lot1.parkACar(linesArray[2]);
         System.out.println("Lets try to park another car!");
         System.out.println("The next car to park is :" + linesArray[3]);
-        test.parkACar(linesArray[3]);
+        Lot1.parkACar(linesArray[3]);
         System.out.println("Lets try to park another car!");
         System.out.println("The next car to park is :" + linesArray[4]);
-        test.parkACar(linesArray[4]);
+        Lot1.parkACar(linesArray[4]);
         
 //        Scanner xp = new Scanner(System.in);
 //        System.out.println("Capacity of parking lot = "+ test.getCapacity());
@@ -84,28 +141,28 @@ public class SoftwareDesignAssignment3 {
 //        
         
       
-//        Random rand = new Random();
-//        
-//        int index = rand.nextInt(test.getSize() +1);
-//        CarParkInfo pc = test.getCars().get(index);
-//        System.out.println("\nThis Car is Trying to leave the parking lot.");
-//        test.leaveFromParking(pc);
-//        
-//        System.out.println("\nThe number of cars parked at this moment : "+ test.getSize());
-//        
-//        index = rand.nextInt(test.getSize() + 1);
-//        pc = test.getCars().get(index);
-//        System.out.println("\nA car is trying to leave.");
-//        test.leaveFromParking(pc);
-//
-//        System.out.println("\nThe number of cars parked right now is : "+ test.getSize());
-//
+        Random rand = new Random();
+        
+        int index = rand.nextInt(Lot1.getSize() +1);
+        CarParkInfo pc = Lot1.getCars().get(index);
+        System.out.println("\nThis Car is Trying to leave the parking lot.");
+        Lot1.leaveFromParking(pc);
+        
+        System.out.println("\nThe number of cars parked at this moment : "+ Lot1.getSize());
+        
+        index = rand.nextInt(Lot1.getSize() + 1);
+        pc = Lot1.getCars().get(index);
+        System.out.println("\nA car is trying to leave.");
+        Lot1.leaveFromParking(pc);
+
+        System.out.println("\nThe number of cars parked right now is : "+ Lot1.getSize());
+
 //        //should not allow to enter parking
 //        System.out.println("\nLets Try to Park! What is your name:");
 //        test.parkACar(xp.nextLine());  
-//
-//        System.out.println("\nThe number of cars parked right now is : "+ test.getSize());
-//
+
+        System.out.println("\nThe number of cars parked right now is : "+ Lot1.getSize());
+
 //        xp.close();
 //        
          
